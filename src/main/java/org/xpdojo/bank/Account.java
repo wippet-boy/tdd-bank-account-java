@@ -18,4 +18,13 @@ public class Account {
     public void withdraw (int amount) {
         balance = balance - amount;
     }
+
+
+    public void transfer (Account target, int value) {
+        if (balance >= value ) {
+            target.deposit(value);
+            this.withdraw(value);
+        }
+
+    }
 }
