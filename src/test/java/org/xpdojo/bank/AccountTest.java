@@ -9,7 +9,6 @@ public class AccountTest {
 
     @Test
 	public void depositAnAmountToIncreaseTheBalance() {
-
         Account account = new Account();
         assertThat(account.balance()).isEqualTo(0);
     }
