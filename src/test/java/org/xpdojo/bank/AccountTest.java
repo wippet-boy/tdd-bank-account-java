@@ -53,6 +53,20 @@ public class AccountTest {
         assertThat(targetAccount.balance()).isEqualTo(5);
     }
 
+    @Test
+    public void transferNegativeAmount () {
+        Account account = new Account();
+        account.deposit(20);
+        Account targetAccount = new Account();
+        targetAccount.deposit(5);
+
+        account.transfer(targetAccount, -5);
+
+        assertThat(account.balance()).isEqualTo(20);
+        assertThat(targetAccount.balance()).isEqualTo(5);
+    }
+
+
 
 
 }
