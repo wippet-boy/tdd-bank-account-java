@@ -13,12 +13,19 @@ public class AccountTest {
         assertThat(account.balance()).isEqualTo(0);
     }
 
-
     @Test
     public void depositAmount() {
         Account account = new Account();
         account.deposit(20);
         assertThat(account.balance()).isEqualTo(20);
     }
+
+    @Test
+    public void withdrawAmount() {
+        Account account = new Account();
+        account.withdraw(5);
+        assertThat(account.balance()).isEqualTo(-5);
+    }
+
 
 }
