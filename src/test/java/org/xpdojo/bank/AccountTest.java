@@ -21,6 +21,13 @@ public class AccountTest {
     }
 
     @Test
+    public void depositAmountNegative() {
+        Account account = new Account();
+        account.deposit(-20);
+        assertThat(account.balance()).isEqualTo(0);
+    }
+
+    @Test
     public void withdrawAmount() {
         Account account = new Account();
         account.withdraw(5);

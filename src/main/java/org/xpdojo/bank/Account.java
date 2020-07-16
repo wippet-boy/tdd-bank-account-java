@@ -12,7 +12,9 @@ public class Account {
     }
 
     public void deposit(int amount) {
-        balance += amount;
+        if (amount >= 0){
+            balance += amount;
+        }
     }
 
     public void withdraw (int amount) {
