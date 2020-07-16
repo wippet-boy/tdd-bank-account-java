@@ -19,12 +19,10 @@ public class Account {
         balance = balance - amount;
     }
 
-
     public void transfer (Account target, int value) {
         if (balance >= value && value > 0) {
             target.deposit(value);
             this.withdraw(value);
         }
-
     }
 }
