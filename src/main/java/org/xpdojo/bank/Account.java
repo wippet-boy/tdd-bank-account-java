@@ -1,11 +1,16 @@
 package org.xpdojo.bank;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 /**
  * Test comment
  */
 public class Account {
 
+
     int balance = 0;
+
 
     public int balance (){
         return balance;
@@ -16,6 +21,18 @@ public class Account {
             balance += amount;
         }
     }
+
+    public String statement() {
+        LocalDate date = LocalDate.now();
+        LocalTime time = LocalTime.now();
+
+        return "Account{" +
+                "balance=" + balance +
+                ", date=" + date +
+                ", time=" + time +
+                '}';
+    }
+
 
     public void withdraw (int amount) {
         balance = balance - amount;

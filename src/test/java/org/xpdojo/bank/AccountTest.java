@@ -86,5 +86,19 @@ public class AccountTest {
         assertThat(targetAccount.balance()).isEqualTo(25);
     }
 
+    @Test
+    public void printBlanace () {
+        Account account = new Account();
+        account.deposit(30);
+
+        System.out.println(account.statement());
+
+        assertThat(account.statement()).contains("balance=30");
+        assertThat(account.statement()).contains("date=");
+        assertThat(account.statement()).contains("time=");
+
+    }
+
+
 
 }
