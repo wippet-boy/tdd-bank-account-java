@@ -91,7 +91,7 @@ public class AccountTest {
         Account account = new Account();
         account.deposit(30);
 
-        System.out.println(account.statement());
+        System.out.println("account:" + account.statement());
 
         assertThat(account.statement()).contains("balance=30");
         assertThat(account.statement()).contains("date=");
