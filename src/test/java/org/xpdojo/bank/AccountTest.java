@@ -95,7 +95,7 @@ public class AccountTest {
 
         assertThat(account.statement()).contains("balance=30");
         assertThat(account.statement()).contains("date=");
-        assertThat(account.statement()).contains("time=");
+        assertThat(account.statement()).contains("time==");
 
     }
 
